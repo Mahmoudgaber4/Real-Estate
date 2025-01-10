@@ -1,0 +1,40 @@
+<odoo>
+    <record id="client_tree_view" model="ir.ui.view">
+        <field name="name">Client Tree View</field>
+        <field name="model">client</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="address" optional="1"/>
+                <field name="property_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+    <record id="client_form_view" model="ir.ui.view">
+        <field name="name">Client Form View</field>
+        <field name="model">client</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h3>
+                            <field name="name"/>
+                        </h3>
+                    </div>
+                    <group string="Client Info">
+                        <field name="phone"/>
+                        <field name="address"/>
+                        <field name="property_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="client_action" model="ir.actions.act_window">
+        <field name="name">Client</field>
+        <field name="res_model">client</field>
+    </record>
+    <menuitem id="client_menu_item" name="Client" parent="management_menu" action="client_action"/>
+</odoo>

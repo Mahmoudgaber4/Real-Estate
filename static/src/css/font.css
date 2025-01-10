@@ -1,0 +1,7 @@
+/*
+define fonts
+*/
+@font-face{
+font-family: 'RubikVinyl-Regular';
+src:url('real_estate/static/src/fonts/RubikVinyl-Regular.ttf');
+}
