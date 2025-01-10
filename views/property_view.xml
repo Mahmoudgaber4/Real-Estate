@@ -4,6 +4,11 @@
         <field name="model">property</field>
         <field name="arch" type="xml">
             <tree multi_edit="1" create="1" edit="1" delete="0" class="header_custom" decoration-danger="(is_late)">
+                <header>
+<!--                    button handle Excel Reports-->
+                    <button name="property_xlsx_reporty" type="object" string="Print Excel Report"
+                            class="btn btn-primary"/>
+                </header>
                 <field name="name"/>
                 <field name="description" optional="1"/>
                 <field name="postcode" optional="1"/>
